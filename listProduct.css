@@ -1,0 +1,59 @@
+
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listProduct .item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden; /* Da bi okviri bili unutar proizvoda */
+    transition: all 0.3s ease; /* Glatki prelaz za ceo element */
+}
+
+/* Kada pređeš mišem na proizvod, dodaćemo okvir */
+.listProduct .item:hover {
+    border: 4px solid #456794;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Senka oko proizvoda da izgleda "lebdeće" */
+}
+    
+.listProduct .item img {
+    width: 100%;
+    height: 170px;
+    filter: drop-shadow(0 50px 20px #0009);
+    transition: transform 0.3s ease; /* Prelaz za transformaciju slike */
+}
+
+/* Kada pređeš mišem na sliku, slika će se uvećati */
+.listProduct .item:hover img {
+    transform: scale(1.05); /* Uvećanje slike na hover */
+}
+
+.listProduct .item:hover .addCart {
+    display: block;
+}
+    
+    /* Cena i naziv proizvoda */
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+    margin: 10px 0;
+}
+    
+.listProduct .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+    margin: 10px 0;
+}
+    
+.listProduct .item button{
+    background-color: #b0aca4;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}

@@ -1,0 +1,33 @@
+.addCart {
+    display: none;
+    background: linear-gradient(45deg, #456794, #648abb);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0.9;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.addCart:hover {
+    background: linear-gradient(45deg, #456794, #a3b3c9);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.addCart:active {
+    transform: translateY(2px);
+}
+
+/* Prikazivanje dugmeta pri hoveru na proizvodu */
+.product-image:hover .addCart {
+    display: block;
+}

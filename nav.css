@@ -1,0 +1,89 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #456794; /* Tamno zelena pozadina */
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Suptilna senka za dubinu */
+    transition: background-color 0.3s ease-in-out; /* Glatka promena pozadine */
+}
+
+/* Logo unutar navbar-a */
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease; /* Efekat rotacije logo-a pri hoveru */
+}
+
+/* Navigacijski stavke */
+.navbar .nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-items li {
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Veza u navbar-u */
+.navbar .nav-items a {
+    color: #fff;  /* Bela boja za tekst */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Efekti prelaza */
+}
+
+/* Efekat na linkovima prilikom hovera */
+.navbar .nav-items a:hover {
+    color:  #a9c7ef;  /* Promena boje teksta na svetlo zelenu */
+    text-shadow: 0 0 10px rgba(183, 243, 247, 0.8); /* Efekat svetle senke oko teksta */
+    transform: scale(1.1); /* Lagano uvećanje teksta */
+}
+
+/* Ikona korpe */
+.icon-cart {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efekat za uvećanje ikone */
+}
+
+.icon-cart:hover {
+    transform: scale(1.2); /* Uvećanje ikone korpe */
+    color:  #a9c7ef; /* Svetlozelena boja za ikonu na hover */
+}
+
+/* Broj u ikoni korpe */
+.icon-cart span {
+    position: absolute;
+    background-color:  #a9c7ef;  /* Pozadina kruga u zelenoj boji */
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: -5px;
+    right: -5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efekat na broju u ikoni korpe */
+.icon-cart:hover span {
+    background-color:  #8cadd8;  
+}
+
+/* Animacija logo slike pri hoveru */
+.navbar .logo img:hover {
+    transform: rotate(360deg); /* Rotacija logotipa */
+}

@@ -1,0 +1,223 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+  
+body{
+    margin: 0;
+    font-family: Poppins;
+    background: linear-gradient(to top left, #667992, #cad9ee);
+}
+.container{
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.title{
+    font-size: xx-large;
+    color:  #456794;
+}
+
+.white{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+/* Glavni stil za listu proizvoda u korpi */
+.listCart {
+    margin-top: 14px;
+    background-color: #456794;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px;
+    overflow-y: auto; /* Omogućiti samo vertikalno skrolovanje */
+    overflow-x: hidden; /* Onemogućiti horizontalno skrolovanje */
+    margin-bottom: 30px; /* Razmak od ostatka stranice */
+}
+
+/* Stil za vertikalni scrollbar */
+.listCart::-webkit-scrollbar {
+    width: 10px; /* Širina scrollbar-a */
+}
+
+.listCart::-webkit-scrollbar-track {
+    background: whitesmoke; /* Svetlo zelena pozadina traga scrollbar-a */
+    border-radius: 10px;
+}
+
+.listCart::-webkit-scrollbar-thumb {
+    background:  #6582a9; /* Tamno zelena boja scrollbar-a */
+    border-radius: 10px;
+}
+
+.listCart::-webkit-scrollbar-thumb:hover {
+    background: #456794; /* Tamnija zelena pri hover efektu */
+}
+
+/* Stavka u korpi (proizvod) */
+.listCart .item {
+    display: grid;
+    grid-template-columns: 70px 1fr 120px 1fr; /* Slika, Naziv, Količina, Cena */
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #6e88ab; /* Alternirajuće pozadine */
+}
+
+/* Slika proizvoda u korpi */
+.listCart .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Naziv proizvoda - crna boja */
+.listCart .item .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: black; /* Crna boja za tekst */
+   
+}
+
+
+
+/* Kontrolisanje količine - Dugmad pomerena dodatno ulevo */
+.listCart .item .quantity {
+    display: flex;
+    justify-content: flex-start; /* Poravnavanje dugmadi levo */
+    margin-right: 50px;
+    margin-left: -40px; /* Pomeranje još više ulevo */
+    gap: 3px;
+}
+
+.listCart .quantity span {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    color: #456794;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+/* Količina dugmadi */
+.listCart .quantity span:hover {
+    background-color:  #a9c7ef;
+    color: white;
+}
+
+
+.listCart .quantity span:active {
+    transform: scale(0.9); /* Malo smanjenje dugmadi kada se klikne */
+}
+
+/* Cena proizvoda */
+.listCart .item .price {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+/* Dugmadi u korpi */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* Dugme za zatvaranje */
+.btn .close {
+    background-color: #87a8d3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn .close:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* Dugme za Checkout */
+.btn .checkOut {
+    background-color: #87a8d3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn .checkOut:hover {
+    background-color:  #a9c7ef;
+}
+
+
+body.showCart .listProduct {
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+    margin-left: 110px;/* Proizvodi zadržavaju sličnu širinu */
+    gap: 20px; /* Razmak između proizvoda ostaje isti */
+}
+
+body.showCart .listProduct .item {
+    width: 200px; /* Omogućava proizvodima da koriste punu širinu ćelije */
+    height: auto; /* Prilagođava visinu ako je potrebno */
+}
+
+body.showCart .title {
+    text-align: left; /* Poravnajte naslov levo da odgovara mreži */
+    margin-left: 100px; /* Pomerite ga malo ulevo */
+    padding-left: 20px; /* Dodajte razmak da se poravna s proizvodima */
+    transition: 0.3s ease; /* Animacija za glatku tranziciju */
+}
+
+
+
+
